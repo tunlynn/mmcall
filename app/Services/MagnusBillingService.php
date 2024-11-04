@@ -5,6 +5,7 @@ namespace App\Services;
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 use magnusbilling\api\magnusBilling;
+use magnusbilling\api\Exception;
 
 class MagnusBillingService
 {

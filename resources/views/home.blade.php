@@ -28,7 +28,7 @@
                                     class="text-secondary">Password:</span> &nbsp; {{ $phoneaccount->password }}
                             </li>
                             <li class="list-group-item border-0 ps-0 text-dark font-weight-semibold pb-1 text-sm"><span
-                                    class="text-secondary">Account Domain:</span> &nbsp; {{ env('MBILLING_API_ENDPOINT') }}</li>
+                                    class="text-secondary">Account Domain:</span> &nbsp; {{ env('MBILLING_DOMAIN') }}</li>
                             <li class="list-group-item border-0 ps-0 text-dark font-weight-semibold pb-1 text-sm"><span
                                     class="text-secondary">Balance:</span> &nbsp; {{ $credit }}</li>
                         @endif

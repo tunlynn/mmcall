@@ -20,4 +20,6 @@ Route::get('/how-to-use', function () {
     return view('how-to');
 });
 
+Route::get('/test', [HomeController::class, 'test']);
+
 // Route::get('/phoneaccount/create', [PhoneAccountController::class, 'store']);

@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\PhoneAccountController;
 
 Route::get('/', function () {
-    return redirect('/home');
+    return redirect('/landing');
 });
 
 Auth::routes(['verify' => true]);
@@ -20,6 +20,8 @@ Route::get('/how-to-use', function () {
     return view('how-to');
 });
 
-Route::get('/test', [HomeController::class, 'test']);
+Route::get('/landing', function () {
+    return view('landing');
+});
 
 // Route::get('/phoneaccount/create', [PhoneAccountController::class, 'store']);

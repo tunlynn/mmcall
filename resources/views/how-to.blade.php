@@ -24,7 +24,7 @@
         <li><strong>Account ID</strong>: Used as your <em>SIP Username</em>.</li>
         <li><strong>Password</strong>: Used as your <em>SIP Password</em>.</li>
         <li><strong>Domain</strong>: Used as your <em>SIP Domain</em>.</li>
-        <li><strong>Balance</strong>: Shows your remaining balance for calls.</li>
+        <li><strong>Balance</strong>: Shows your remaining minutes for calls.</li>
     </ul>
 
     <h2>Step 3: Configure Your Account in Linphone</h2>
@@ -43,13 +43,12 @@
         </li>
         <li>Tap <strong>Login</strong> to complete the setup.</li>
     </ol>
-
-    <h2>Step 4: Check Your Balance</h2>
-    <p>To view your remaining balance, go to the <strong>Balance</strong> section in your account on our
-        service’s web interface.</p>
-
-    <h2>Step 5: Start Making Calls</h2>
+    <h2>Step 4: Start Making Calls</h2>
     <p>Once Linphone registers successfully with your Softphone account, you can start making and receiving
         calls using the app.</p>
+
+        <h2>Step 5: Check Your Balance</h2>
+    <p>To view your remaining minutes, go to the <strong>Balance</strong> section in your account on our
+        service’s web interface.</p>
 </div>
 @endsection

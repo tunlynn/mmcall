@@ -30,7 +30,7 @@
                             <li class="list-group-item border-0 ps-0 text-dark font-weight-semibold pb-1 text-sm"><span
                                     class="text-secondary">Account Domain:</span> &nbsp; {{ env('MBILLING_DOMAIN') }}</li>
                             <li class="list-group-item border-0 ps-0 text-dark font-weight-semibold pb-1 text-sm"><span
-                                    class="text-secondary">Balance:</span> &nbsp; {{ $credit }}</li>
+                                    class="text-secondary">Balance:</span> &nbsp; {{ $credit }} minute{{ $credit >= 2 ? 's' : '' }}</li>
                         @endif
                     </div>
                 </div>
@@ -38,10 +38,10 @@
 
                 <div class="mt-5">
                     <h2>Refill Your Credit Balance</h2>
-                    <p>If you would like to refill your credit balance, please contact us via Telegram:</p>
+                    <p>If you would like to refill your credit balance, please contact us via Facebook Messenger:</p>
                     <p>
-                        <strong>Telegram Account:</strong> 
-                        <a href="https://t.me/your_telegram_account" target="_blank">@your_telegram_account</a>
+                        <strong>Messenger Account Link:</strong> 
+                        <a href="https://m.me/443192478884918" target="_blank">@MMCall</a>
                     </p>
                     <p>Our team will assist you with the refilling process.</p>
                 </div>

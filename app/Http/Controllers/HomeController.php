@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -61,10 +61,13 @@ class HomeController extends Controller
             $phone_account = $new_phone_account;
         }
 
-        $credit = $magnus->getCreditByUsername($phone_account->username);
+        $credit_response = $magnus->getCreditByUsername($phone_account->username);
+        if ($credit_response == "Error: No phone account found"){
+            return ("Something went wrong while fetching your data. Please contact our support at Telegram @telegram_username.php ");
+        }
         return view('home', [
             'phoneaccount' => $phone_account,
-            'credit' => $credit,
+            'credit' => $credit_response,
         ]);
     }
 }

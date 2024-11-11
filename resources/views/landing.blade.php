@@ -100,7 +100,7 @@
                             <h3>Pay-As-You-Go</h3>
                         </div>
                         <div class="card-body">
-                            <h4 class="display-4">฿0.5 / Min</h4>
+                            <h4 class="display-4">฿1.0 / Min</h4>
                             <p>Only pay for what you use. No monthly fees or hidden charges.</p>
                             <a href="{{ url('/register') }}" class="btn btn-outline-primary">Start Calling Now</a>
                         </div>

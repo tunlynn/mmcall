@@ -2,6 +2,55 @@
 
 @section('content')
 <div class="container">
+    <h1>MMCall ကိုစတင်အသုံးပြုရန်</h1>
+
+    <h2>အဆင့်(၁) Linphone application ကိုဖုန်းတွင် ထည့်သွင်းပါ။</h2>
+    <ol>
+        <li>Linphone application ကို အောက်ပါ link များမှတစ်ဆင့် download ရယူပါ။
+            <br>
+            <a href="https://www.linphone.org/" target="_blank">Official
+                website</a>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=org.linphone" target="_blank">Android</a>
+            <br>
+            <a href="https://apps.apple.com/us/app/linphone/id360065638" target="_blank">iOS</a>
+        </li>
+        <li>သင့်ရဲ့ device တွင် Linphone application ကို install လုပ်ပါ။ (available for Windows, Mac, iOS, Android, and Linux)</li>
+    </ol>
+
+    <h2>အဆင့်(၂)  Phone account ကို စတင်အသုံးပြုရန် အချက်အလက်များကို စစ်ဆေးပါ။</h2>
+    <p>သင်၏အကောင့်ကို <a href="{{ url("/home") }}">MM-Call service</a> တွင် log in ဝင်ပြီးနောက် phone account အချက်အလက်များကို အောက်မှာဖော်ပြထားတဲ့အတိုင်း မြင်တွေ့ရမှာ ဖြစ်ပါတယ်။</p>
+    <ul>
+        <li><strong>Account ID</strong>: သည် Linphone account ၏ <em>SIP Username</em> ဖြစ်သည်။</li>
+        <li><strong>Password</strong>: သည် Linphone account ၏ <em>SIP Password</em> ဖြစ်သည်။</li>
+        <li><strong>Domain</strong>: သည် Linphone account ၏ <em>SIP Domain</em> ဖြစ်သည်။</li>
+        <li><strong>Balance</strong>: သည် ဖုန်းခေါ်ဆိုမှုအတွက် သင်၏လက်ကျန်မိနစ်များကို ပြသထားခြင်းဖြစ်သည်။</li>
+    </ul>
+
+    <h2>အဆင့်(၃) Linphone Account တွင် အချက်အလက်များကို ထည့်သွင်းပါ။</h2>
+    <ol>
+        <li>Linphone application ကိုဖွင့်ပြီး <strong>Menu</strong> ထဲမှ <strong>Assistant</strong> ကိုသွားပါ။</li>
+        <li><strong>Assistant</strong> ထဲမှ <strong>USE SIP ACCOUNT</strong> ကိုရွေးပါ။</li>
+        <li>သင်၏ အချက်အလက်များကို အောက်ပါအတိုင်း ထည့်သွင်းပါ။
+            <ul>
+                <li><strong>Username</strong> နေရာတွင် <em>Account ID</em> ကိုဖြည့်ပါ။</li>
+                <li><strong>Password</strong> နေရာတွင် သင်၏ Account အချက်အလက် ထဲမှ <em>Password</em> ကိုဖြည့်ပါ။</li>
+                <li><strong>Domain</strong>: နေရာတွင် သင်၏ Account အချက်အလက် ထဲမှ <em>Domain</em> ကိုဖြည့်ပါ။
+                </li>
+                <li><strong>Transport</strong> တွင် <em>UDP</em> ကိုရွေးပါ။
+                </li>
+            </ul>
+        </li>
+        <li><strong>Login</strong> ကိုနှိပ်ပါ။</li>
+    </ol>
+    <h2>အဆင့်(၄) ဖုန်းစတင်ခေါ်ဆိုနိုင်ပါပြီ။</h2>
+    <p>Linphone အကောင့်ကို အောင်မြင်စွာပြုလုပ်ပြီးသည်နှင့် တစ်ပြိုင်နက် ဖုန်းခေါ်ဆိုမှုများကို စတင်ပြုလုပ်နိုင်မှာ ဖြစ်ပါတယ်။</p>
+
+        <h2>အဆင့်(၅) သင်၏လက်မိနစ်ကို စစ်ဆေးပါ။</h2>
+    <p>ဖုန်းခေါ်ဆိုမှုအတွက် လက်ကျန်မိနစ်များကို စစ်ဆေးရန် ကျွန်ပ်တို့ website စာမျက်နှာရှိ  balance section တွင် စစ်‌ဆေးနိုင်ပါသည်။</p>
+</div>
+<hr>
+<div class="container mt-4">
     <h1>How to Set Up and Use Your Softphone Account with Linphone</h1>
 
     <h2>Step 1: Install Linphone</h2>
@@ -47,8 +96,9 @@
     <p>Once Linphone registers successfully with your Softphone account, you can start making and receiving
         calls using the app.</p>
 
-        <h2>Step 5: Check Your Balance</h2>
+        <h2>Step 5: Check Your Remaining Balance</h2>
     <p>To view your remaining minutes, go to the <strong>Balance</strong> section in your account on our
         service’s web interface.</p>
 </div>
+
 @endsection

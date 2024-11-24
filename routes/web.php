@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return redirect('/landing');
-});
+Route::redirect('/', '/landing');
 
 Auth::routes(['verify' => true]);
 
@@ -14,13 +12,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
+Route::view('/how-to-use', 'how-to');
 
-Route::get('/how-to-use', function () {
-    return view('how-to');
-});
+Route::view('/landing', 'landing');
 
-Route::get('/landing', function () {
-    return view('landing');
-});
-
-// Route::get('/phoneaccount/create', [PhoneAccountController::class, 'store']);

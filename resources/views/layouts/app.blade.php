@@ -11,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    {{-- <link rel="dns-prefetch" href="//fonts.bunny.net"> --}}
-    {{-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> --}}
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -24,7 +24,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{-- {{ config('app.name', 'Laravel') }} --}}
-                    <img src="logo.png" class="img-fluid rounded-top" alt="MMCall" style= "max-width: 100px;" />
+                    <img src="/logo.png" class="img-fluid rounded-top" alt="MMCall" style= "max-width: 100px;" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

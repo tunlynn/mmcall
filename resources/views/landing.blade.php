@@ -2,11 +2,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affordable Calls to Myanmar - Pay-As-You-Go</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         /* Custom styles for a modern look */
         .hero {
@@ -14,18 +19,14 @@
             color: #333;
             padding: 10rem 0;
         }
+
         .feature-icon {
             font-size: 1.5rem;
             color: #007bff;
         }
-        .pricing-card {
-            transition: transform 0.3s ease;
-        }
-        .pricing-card:hover {
-            transform: scale(1.05);
-        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -35,12 +36,14 @@
                 <img src="logo.png" class="img-fluid" alt="MMCall" style= "max-width: 100px;" />
             </a>
 
-            
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
@@ -49,9 +52,10 @@
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <a href="{{ url('/login') }}" class="btn btn-outline-secondary ms-lg-5">Login</a>
+                <a href="{{ auth()->user() ? url('/home') : url('/login') }}"
+                    class="btn btn-outline-dark ms-lg-5 mt-2 mt-lg-0">{{ auth()->user() ? 'Go to My Account' : 'Login' }}</a>
             </div>
-            
+
         </div>
     </nav>
 
@@ -59,8 +63,9 @@
     <header class="hero text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Stay Connected to Myanmar at Affordable Rates</h1>
-            <p class="lead">Reliable, low-cost international calling with no hidden fees or contracts. Pay only for what you use.</p>
-            <a href="{{ url('register') }}" class="btn btn-outline-primary btn-lg mt-3">Get Started</a>
+            <p class="lead">Reliable, low-cost international calling with no hidden fees or contracts. Pay only for
+                what you use.</p>
+            <a href="{{ url('register') }}" class="btn btn-dark btn-lg mt-3">Get Started</a>
         </div>
     </header>
 
@@ -92,17 +97,18 @@
     <section id="pricing" class="bg-light p-5">
         <div class="container">
             <h2 class="text-center mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-center">Our affordable pay-as-you-go model lets you call Myanmar without breaking the bank.</p>
+            <p class="text-center">Our affordable pay-as-you-go model lets you call Myanmar without breaking the bank.
+            </p>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-secondary pricing-card mb-4 text-center">
-                        <div class="card-header bg-secondary text-white">
-                            <h3>Pay-As-You-Go</h3>
+                    <div class="card border-dark mb-4 text-center">
+                        <div class="card-header text-dark">
+                            <h3 class="fw-bold">Pay-As-You-Go</h3>
                         </div>
                         <div class="card-body">
                             <h4 class="display-4">฿1.0 / Min</h4>
                             <p>Only pay for what you use. No monthly fees or hidden charges.</p>
-                            <a href="{{ url('/register') }}" class="btn btn-outline-primary">Start Calling Now</a>
+                            <a href="{{ url('/register') }}" class="btn btn-outline-dark">Start Calling Now</a>
                         </div>
                     </div>
                 </div>
@@ -139,9 +145,9 @@
 
     <!-- FAQ Section -->
     <section id="faq" class="bg-light p-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
+        <div class="container d-flex flex-column align-items-center">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            {{-- <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -178,6 +184,22 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+
+            <div class="">
+                <div class="w-100 mb-4">
+                    <h3>How does pay-as-you-go work?</h3>
+                    You simply add funds to your account and pay only for the minutes you use. No monthly fees or
+                    contracts.
+                </div>
+                <div class="w-100 mb-4">
+                    <h3>Are there any hidden fees?</h3>
+                    No hidden fees! Our rates are transparent and you only pay for the minutes you use.
+                </div>
+                <div class="w-100">
+                    <h3>How can I check my balance?</h3>
+                    Log into your account to view your current balance and call history.
+                </div>
             </div>
         </div>
     </section>
@@ -187,7 +209,8 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>If you have any questions, feel free to reach out!</p>
-            <a href="{{ url('https://m.me/443192478884918') }}" class="btn btn-outline-primary">Contact Support</a>
+            <a href="{{ url('https://m.me/443192478884918') }}" target="_blank" class="btn btn-outline-dark">Contact
+                Support</a>
         </div>
     </section>
 
@@ -201,4 +224,5 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -59,7 +59,7 @@
                                         minute{{ $credit >= 2 ? 's' : '' }}</h3>
 
 
-                                    <a class="btn btn-primary" href="https://m.me/443192478884918"
+                                    <a class="btn btn-dark" href="https://m.me/443192478884918"
                                         target="_blank">Top Up via Facebook Messenger</a>
 
                                     <p class="my-0">Our team will assist you with the refilling process.</p>
@@ -73,7 +73,7 @@
                     </div>
 
                     <div>
-                        <a class="btn btn-primary" href={{ url('/how-to-use') }}>Check How To Use</a>
+                        <a class="btn btn-outline-dark" href={{ url('/how-to-use') }}>Check How To Use</a>
                     </div>
                 @endif
 

@@ -25,7 +25,7 @@
                                 <div class="card-body d-flex align-items-center">
                                     <div>
                                         <li class="list-group-item border-0 ps-0 text-dark fw-semibold pb-1 text-sm">
-                                            <span class="text-secondary">Account ID:</span> &nbsp;
+                                            <span class="text-secondary">Username:</span> &nbsp;
                                             {{ $phoneaccount->username }}
                                         </li>
                                         <li class="list-group-item border-0 ps-0 text-dark fw-semibold pb-1 text-sm">
@@ -33,8 +33,11 @@
                                             {{ $phoneaccount->password }}
                                         </li>
                                         <li class="list-group-item border-0 ps-0 text-dark fw-semibold pb-1 text-sm">
-                                            <span class="text-secondary">Account Domain:</span> &nbsp;
+                                            <span class="text-secondary">Domain:</span> &nbsp;
                                             {{ env('MBILLING_DOMAIN') }}
+                                        </li>
+                                        <li class="list-group-item border-0 ps-0 text-dark fw-semibold pb-1 text-sm">
+                                            <span class="text-secondary">Transport:</span> &nbsp;UDP
                                         </li>
                                         {{-- <li class="list-group-item border-0 ps-0 text-dark fw-semibold pb-1 text-sm">
                                             <span class="text-secondary">Balance:</span>
@@ -59,8 +62,8 @@
                                         minute{{ $credit >= 2 ? 's' : '' }}</h3>
 
 
-                                    <a class="btn btn-dark" href="https://m.me/443192478884918"
-                                        target="_blank">Top Up via Facebook Messenger</a>
+                                    <a class="btn btn-dark" href="https://m.me/443192478884918" target="_blank">Top Up via
+                                        Facebook Messenger</a>
 
                                     <p class="my-0">Our team will assist you with the refilling process.</p>
                                 </div>

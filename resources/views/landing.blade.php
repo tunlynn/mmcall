@@ -65,7 +65,8 @@
             <h1 class="display-4 fw-bold">Stay Connected to Myanmar at Affordable Rates</h1>
             <p class="lead">Reliable, low-cost international calling with no hidden fees or contracts. Pay only for
                 what you use.</p>
-            <a href="{{ url('register') }}" class="btn btn-dark btn-lg mt-3">Get Started</a>
+            <a href="{{ url('register') }}" class="btn btn-dark btn-lg mt-3 me-2">Get Started</a>
+            <a href="{{ url('how-to-use') }}" class="btn btn-outline-dark btn-lg mt-3">How To Use?</a>
         </div>
     </header>
 

@@ -11,6 +11,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         /* Custom styles for a modern look */
@@ -25,9 +27,12 @@
             color: #007bff;
         }
     </style>
+
 </head>
 
 <body>
+
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
@@ -54,7 +59,10 @@
                 </ul>
                 <a href="{{ auth()->user() ? url('/home') : url('/login') }}"
                     class="btn btn-outline-dark ms-lg-5 mt-2 mt-lg-0">{{ auth()->user() ? 'Go to My Account' : 'Login' }}</a>
+                <a href="/register"
+                    class="btn btn-dark ms-lg-2 mt-2 mt-lg-0 {{ auth()->user() ? 'd-none' : '' }}">Register</a>
             </div>
+
 
         </div>
     </nav>
@@ -222,8 +230,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
